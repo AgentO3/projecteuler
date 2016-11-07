@@ -2,10 +2,10 @@
 
 ## Running Tests
 
-To run the tests use the test script in the script directory.
+To run the tests use the test scripts in the script directory.
 
 ```
-./script/test
+./scripts/test
 ```
 
 This will assert that all the problem functions return the correct result.
