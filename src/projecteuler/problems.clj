@@ -49,10 +49,12 @@
 
 (defn Problem7
   "What is the 10,001st prime number? - https://projecteuler.net/problem=7"
-  ;; Gives us a sequence of 10,001 prime numbers.
+  ;; Gives us a sequence of 10,001 prime numbers numbers minus 1.
+  ;; We subtract 1 from the prime-pos to compinsate for the number 2 not being included
+  ;; in the odd sequence. We only evaulate odd numbers because all prime numbers are odd.
   ;; The last one in that sequence will be the one in the 10,001st position.
-  [] (last (take prime-pos
+  [] (last (take (- prime-pos 1)
                  ;; Filter out all non-prime numbers.
                  (filter prime?
-                    ;; Generate a sequence of numbers starting at 2.
-                         (iterate inc 2)))))
+                    ;; Generate a sequence of odd numbers starting at 3.
+                         (iterate #(+ % 2) 3)))))
