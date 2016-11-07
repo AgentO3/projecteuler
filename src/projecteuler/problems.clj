@@ -36,8 +36,8 @@
 
 ;; Test if number is prime.
 (defn prime? [n]
-  ;; Fast path for 2 and 3
-  (if (or (= n 2) (= n 3))
+  ;; Fast path for 3
+  (if (= n 3)
     true
     ;; Generate a range of 2 to the number we are testing.
     ;; Mod will return 0 if the number in the range is not a factor of n.
